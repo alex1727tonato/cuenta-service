@@ -25,6 +25,11 @@ public class CuentaController {
         return ResponseEntity.ok(cuentaService.listarCuentas());
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Cuenta> actualizar(@PathVariable Long id, @RequestBody Cuenta cuentaActualizada) {
+        return ResponseEntity.ok(cuentaService.actualizarCuenta(id, cuentaActualizada));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Cuenta> obtener(@PathVariable Long id) {
         return cuentaService.obtenerCuentaPorId(id)

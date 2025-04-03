@@ -19,7 +19,7 @@ public class ClienteCreadoListener {
         log.info("Recibido cliente creado: {}", clienteId);
         Cuenta cuenta = new Cuenta();
         cuenta.setClienteId(Long.parseLong(clienteId));
-        cuenta.setNumeroCuenta("AHO-" + clienteId); // prefijo ficticio
+        cuenta.setNumeroCuenta("AHO-" + clienteId);
         cuenta.setTipoCuenta("Ahorro");
         cuenta.setSaldoInicial(0.0);
         cuenta.setEstado(true);
